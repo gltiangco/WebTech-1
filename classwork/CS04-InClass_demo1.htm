@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CS04-InClass</title>
+    <style>
+      ul {
+        /* list-style-type: square; */
+        list-style-image: url(images/smiley.gif);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>This is a map of Middlesex.</h1>
+
+    <p><a href="index.htm">back to index</a></p>
+    <p>Click on a place to see its web page.</p>
+    <p>
+      <map name="Middlesex">
+        <area
+          shape="rect"
+          coords="301, 351, 330, 383"
+          href="http://www.wellesleyma.gov/"
+          alt="Wellesley"
+          title="Wellesley"
+          target="_blank"
+        />
+        <area
+          shape="rect"
+          coords="338, 314, 360, 373"
+          href="http://www.newtonma.gov/"
+          alt="Newton"
+          title="Newton"
+          target="_blank"
+        />
+      </map>
+      <img
+        src="images/Middlesex.gif"
+        usemap="#Middlesex"
+        alt="Map of Middlesex"
+        title="Clickable Map"
+      />
+    </p>
+
+  </body>
+</html>

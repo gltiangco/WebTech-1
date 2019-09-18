@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CS04-InClass</title>
+
+    <style type="text/css">
+      body {
+        /* background-image: url("images/music.gif");
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				background-position: right; */
+        background: url("images/music.gif");
+      }
+
+      ul {
+        list-style-image: url("images/smiley.gif");
+      }
+
+      h1 {
+        position: fixed;
+        top: 10px;
+        left: 200px;
+        z-index: 10;
+        background-color: red;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      img {
+        clear: both;
+        /* z-index: 1; */
+      }
+
+      h3 {
+        color: gold;
+        text-align: center;
+        position: relative;
+        top: -50px;
+        z-index: 3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>This is a map of Middlesex.</h1>
+
+    <p><a href="index.htm">back to index</a></p>
+    <p>Click on a place to see its web page.</p>
+    <p>
+      <map name="Middlesex">
+        <area
+          shape="rect"
+          coords="301, 351, 330, 383"
+          href="http://www.wellesleyma.gov/"
+          alt="Wellesley"
+          title="Wellesley"
+          target="_blank"
+        />
+        <area
+          shape="rect"
+          coords="338, 314, 360, 373"
+          href="http://www.newtonma.gov/"
+          alt="Newton"
+          title="Newton"
+          target="_blank"
+        />
+
+        <img
+          src="images/Middlesex.gif"
+          usemap="#Middlesex"
+          alt="Map of Middlesex"
+          title="Clickable Map"
+        />
+      </map>
+    </p>
+
+    <hr />
+    <h2>My courses:</h2>
+    <ul>
+      <li>WEB TECHNOLOGIES</li>
+      <li>PROBLEM SOLVING AND SOFTWARE DESIGN</li>
+      <li>BUSINESS INTELLIGENCE AND DATA ANALYTICS</li>
+    </ul>
+
+    <h2>2018 FIFA World Cup Ranking</h2>
+    <ol type="I">
+      <li><img src="images/France.png" height="30" />France</li>
+      <li><img src="images/Croatia.png" height="30" />Croatia</li>
+      <li><img src="images/Belgium.png" height="30" />Belgium</li>
+      <li><img src="images/England.png" height="30" />England</li>
+    </ol>
+    <hr />
+
+    <p><img src="images/beaver.jpg" alt="beaver" title="beaver" /></p>
+    <h3>Go Beavers!</h3>
+  </body>
+</html>
