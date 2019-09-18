@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web Tech - CS05 demo</title>
+    <style>
+      /* h1{
+                color: red;
+            }
+
+            h1#remy{
+                color:deeppink;
+                background-color: darkgrey;
+            }
+
+            p{
+                font-family:Arial, Helvetica, sans-serif;
+            }
+
+            #jodee{
+                color:blue;
+                text-decoration: underline;
+            }
+
+            .border{
+                border: 1px yellow solid;
+            }
+
+            p.border{
+                border-radius: 10px;
+                border-width: 3px;
+            }
+
+            p.blue-border{
+                border-color: blue;
+                border-width: 6px;
+                border-style:solid;
+                border-radius: 0;
+            } */
+
+      div#first {
+        color: blue;
+      }
+
+      div#second {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      span.random {
+        font-size: 30px;
+        color: red;
+      }
+      
+      div.square {
+        width: 100px;
+        height: 100px;
+        background-color: thistle;
+        float: left;
+        margin: 10px;
+      }
+      div.circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: thistle;
+        float: left;
+        margin: 10px;
+      }
+      #circle-div {
+        clear: left;
+      }
+
+      a:link {
+        text-decoration: none;
+      }
+
+      a:hover {
+        background-color: yellow;
+      }
+
+      a:visited {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="http://www.google.com">Google</a>
+
+    <div id="first">
+      <h1 id="remy">No School Today (kidding?)</h1>
+      <p id="jodee">
+        I did't realize it is hard to create
+        <span class="random">random</span> sentences.
+      </p>
+      <p>
+        I did't realize it is hard to create
+        <span class="random">random</span> sentences.
+      </p>
+
+      <!-- The paragraph below would be different -->
+      <p class="border">
+        I did't realize it is hard to create <span class="random">random</span>
+        sentences.
+      </p>
+    </div>
+
+    <h1>No, I don't think so</h1>
+    <div id="second">
+      <p>I did't realize it is hard to create random sentences.</p>
+
+      <p class="blue-border">
+        I did't realize it is hard to create random sentences.
+      </p>
+      <!-- The paragraph below would be different -->
+      <p class="border blue-border">
+        I did't realize it is hard to create random sentences.
+      </p>
+    </div>
+    <h1 class="border">No, I don't think so</h1>
+
+    <div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+
+    <div id="circle-div">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </body>
+</html>
