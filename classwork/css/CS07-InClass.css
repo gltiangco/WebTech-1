@@ -1,0 +1,50 @@
+body {
+  /* background-image: url(../images/class2.JPG) */
+}
+
+table {
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0.9;
+  box-shadow: 10px 10px 5px grey;
+  border-spacing: 0;
+  border: 1px solid black;
+}
+
+th,
+td {
+  border: 0.02px solid black;
+  padding: 3px;
+  vertical-align: top;
+  background-color: green;
+}
+
+img {
+  width: 100%;
+}
+
+td.pic {
+  width: 70%;
+  background-color: pink;
+  font-style: italic;
+  text-align: right;
+}
+
+td#last {
+  width: 30%;
+  background-color: lightblue;
+}
+td.thirtyfive {
+  width: 35%;
+  background-color: lightcoral;
+}
+
+p.scroll {
+  background-color: lime;
+  width: 250px;
+  height: 200px;
+  overflow: scroll;
+  margin: 50px auto 0 auto;
+}
