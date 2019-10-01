@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web Forms - CS08-InClass</title>
+    <style type="text/css">
+      h1 {
+        text-align: center;
+        color: navy;
+        font-family: "Lucida Bright";
+      }
+
+      form {
+        font-family: Arial;
+        color: navy;
+        background-color: silver;
+        margin: 50px 100px 50px 100px;
+        padding: 20px 50px 20px 50px;
+      }
+      button{
+        border-radius: 20%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Web Forms - CS08-InClass</h1>
+    <form method="post" action="mailto:zli@babson.edu">
+      <p>
+        Last Name:
+        <input
+          type="text"
+          name="lastname"
+          placeholder="Last name"
+          maxlength="100"
+          size="20"
+        />
+        First Name:
+        <input
+          type="text "
+          name="firstname "
+          placeholder="First name "
+          maxlength="100 "
+          size="20"
+        />
+      </p>
+      <p>
+        Gender: Male <input type="radio" name="gender" value="male" /> Female
+        <input type="radio" name="gender" value="female" />
+      </p>
+      <p>Phone:<input type="tel" /></p>
+
+      <p>
+        My favorite Web Tech topics are <br />
+        <input type="checkbox" name="Topic" value="html" />Basic HTML<br />
+        <input type="checkbox" name="Topic" value="css" />CSS<br />
+        <input type="checkbox" name="Topic" value="tables" />Tables<br />
+        <input type="checkbox" name="Topic" value="forms" />Forms
+      </p>
+      <p>
+        What grade do you expect to receive?
+        <select name="grade">
+          <option value="A">A</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B">B</option>
+          <option value="B-">B-</option>
+          <option value="C+">C+</option>
+        </select>
+      </p>
+      <p>Please add any comments you have.</p>
+      <p>
+        <textarea
+          name="comments"
+          rows="5"
+          cols="29"
+          placeholder="Any comments will help."
+        ></textarea>
+      </p>
+
+      <button type="submit">
+        <img src="images/mailbox.png" height="30" alt="submit_button" />
+      </button>
+      <button type="reset">
+        <img src="images/reset.png" height="30" alt="reset_button" />
+      </button>
+    </form>
+  </body>
+</html>

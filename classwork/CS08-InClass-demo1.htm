@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web Forms - CS08-InClass</title>
+    <style type="text/css">
+      h1 {
+        text-align: center;
+        color: navy;
+      }
+
+      form {
+        font-family: Arial;
+        color: navy;
+        background-color: gray;
+        padding: 20px;
+        margin-top: 20px;
+        /* margin-bottom: 20px; */
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Web Forms - CS08-InClass</h1>
+
+    <form method="post" action="mailto:zli@babson.edu" enctype="text/plain">
+      <p>
+        Last Name:
+        <input
+          type="text"
+          name="lastname"
+          placeholder="Last name"
+          maxlength="100"
+          size="“20”"
+        />
+        First Name:
+        <input
+          type="text"
+          name="firstname"
+          placeholder="First name"
+          maxlength="100"
+          size="“20”"
+        />
+      </p>
+      <p>
+        Gender: Male <input type="radio" name="gender" value="male" /> Female
+        <input type="radio" name="gender" value="female" />
+      </p>
+      <p>
+        My favorite Web Tech topics are <br />
+        <input type="checkbox" name="Q1" value="html" />Basic HTML<br />
+        <input type="checkbox" name="Q1" value="css" />CSS<br />
+        <input type="checkbox" name="Q1" value="tables" />Tables<br />
+        <input type="checkbox" name="Q1" value="forms" />FORMS
+      </p>
+
+      <!-- <p>
+        Select your favorite color:
+        <input type="color" name="favcolor" />
+      </p>
+
+      <p>
+        Select the date:
+        <input type="date" name="today" />
+      </p>
+
+      <p>
+        Select your favorite number:
+        <input type="number" name="favnumber" />
+      </p> -->
+
+      <input type="submit" value="Click me to submit" name="SUBMIT FORM" />
+
+      <input type="reset" value="Reset" name="CLEAR FORM" />
+    </form>
+  </body>
+</html>
