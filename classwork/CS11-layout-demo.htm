@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Layout Demo</title>
+    <style>
+      img {
+        margin: 10px auto;
+        display: block;
+        z-index: 11;
+        /* to-do: figure out how the z-index works here */
+      }
+
+      #main {
+        max-width: 600px;
+        margin: 10px auto;
+        /* border:1px solid black; */
+      }
+      .simple {
+        width: 500px;
+        margin: 20px auto;
+        border: 1px solid black;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      .fancy {
+        width: 500px;
+        margin: 20px auto;
+        padding: 50px;
+        /* border-width:10px;
+          border-color: black;
+          border-style: solid; */
+
+        border: solid blue 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .relative1 {
+        position: relative;
+        border: 1px solid black;
+      }
+      .relative2 {
+        position: relative;
+        top: -20px;
+        left: 100px;
+
+        /* background-color: white; */
+        width: 500px;
+        border: 1px solid black;
+      }
+      .fixed {
+        position: fixed;
+        top: 400px;
+        right: 400px;
+        width: 200px;
+        background-color: yellow;
+        z-index: 10;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed">
+      Hello! I am alone at the corner.
+    </div>
+    <img src="images/class2.JPG" height="400" />
+
+    <div id="main">
+      Setting the width of a block-level element will prevent it from stretching
+      out to the edges of its container to the left and right. Then, you can set
+      the left and right margins to auto to horizontally center that element
+      within its container. The element will take up the width you specify, then
+      the remaining space will be split evenly between the two margins. The only
+      problem occurs when the browser window is narrower than the width of your
+      element. The browser resolves this by creating a horizontal scrollbar on
+      the page. Let's improve the situation...
+    </div>
+
+    <div class="simple">
+      I am smaller
+    </div>
+    <div class="fancy">
+      And I am bigger!
+    </div>
+
+    <div class="relative1">
+      relative behaves the same as static unless you add some extra properties.
+    </div>
+    <div class="relative2">
+      Setting the top, right, bottom, and left properties of a
+      relatively-positioned element will cause it to be adjusted away from its
+      normal position. Other content will not be adjusted to fit into any gap
+      left by the element.
+    </div>
+  </body>
+</html>
