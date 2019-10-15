@@ -9,9 +9,11 @@
   <body>
     <h1>Multimedia Demo Page</h1>
 
-    <video height="300" controls>
+    <video height="300" controls id="cat-video">
       <source src="images/cats.mp4" type="video/mp4" />
     </video>
+
+    <button id="play">play</button>
 
     <iframe
       width="560"
@@ -48,12 +50,26 @@
       allowfullscreen=""
     ></iframe>
 
-    <iframe src="https://www.babson.edu">
-    
-    </iframe>
+    <iframe src="https://www.babson.edu"> </iframe>
 
-    <object data="images/bitcoin.pdf" height="800px" type="application/pdf" width="100%">
-     
+    <object
+      data="images/bitcoin.pdf"
+      height="800px"
+      type="application/pdf"
+      width="100%"
+    >
     </object>
+
+    <script>
+      document.getElementById("play").onclick = function() {
+        if (document.getElementById("cat-video").paused) {
+          document.getElementById("cat-video").play();
+          this.innerHTML = "Pause";
+        } else {
+          document.getElementById("cat-video").pause();
+          this.innerHTML = "Play";
+        }
+      };
+    </script>
   </body>
 </html>
