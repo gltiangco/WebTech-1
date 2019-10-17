@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CS12-InClass</title>
+    <style type="text/css">
+      /* Your styles go here */
+
+      h2 {
+        text-align: center;
+      }
+
+      div {
+        display: inline;
+        margin: 5px;
+      }
+
+      #d1 {
+        position: absolute;
+        z-index: 1;
+      }
+
+      #d2 {
+        position: absolute;
+        z-index: 1;
+        left: 315px;
+      }
+
+      #d3 {
+        position: absolute;
+        z-index: 1;
+        left: 620px;
+      }
+    </style>
+    <script type="text/javascript">
+      function enlarge(x) {
+        let i = document.getElementById(x);
+
+        i.style.zIndex = 10;
+        let w = i.width;
+        // alert(w);
+        i.width = w * (1 + 0.5);
+        // alert("w: " + w + ". The current width " + i.width);
+        i.style.border = "red 1px solid";
+
+        // fix the positions of other pictures when changing the current one
+        parent = document.getElementById(x).parentElement;
+        parent.style.zIndex = 999;
+        parent.style.position = "relative";
+      }
+
+      function shrink(x) {
+        let i = document.getElementById(x);
+        let w = i.width;
+        // alert(w);
+        i.width = w / (1 + 0.5);
+        // alert("w: " + w + ". The current width " + i.width);
+        i.style.border = "None";
+
+        // fix the positions of other pictures when changing the current one
+        parent = document.getElementById(x).parentElement;
+        parent.style.zIndex = 1;
+        parent.style.position = "absolute";
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>Manipulating Styles and Images</h2>
+
+    <div id="d1">
+      <img
+        src="images/usa.png"
+        alt="Image goes here"
+        title="map of USA"
+        width="300"
+        onmouseover="enlarge(this.id)"
+        onmouseout="shrink(this.id)"
+        id="map"
+      />
+    </div>
+
+    <div id="d2">
+      <img
+        src="images/class1.JPG"
+        width="300"
+        onmouseover="enlarge(this.id)"
+        onmouseout="shrink(this.id)"
+        id="second"
+        alt="class"
+      />
+    </div>
+
+    <div id="d3">
+      <img
+        src="images/tiger1.jpg"
+        width="300"
+        onmouseover="enlarge(this.id)"
+        onmouseout="shrink(this.id)"
+        id="tiger"
+        alt="tiger"
+      />
+    </div>
+  </body>
+</html>
