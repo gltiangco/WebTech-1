@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Conditional Statements Demo</title>
+  </head>
+  <body>
+    <h3>Conditional Statements Demo</h3>
+    <button onclick="ask()">Click Me</button>
+    <p>You just entered: <span id="input"></span></p>
+    <p>Result: <span id="result"></span></p>
+    <div>
+      <img id="img-result" height="100" />
+    </div>
+
+    <script type="text/javascript">
+      function ask() {
+        // let message = prompt("What day of week is it today?");
+        // //   alert(message);
+        // console.log(message);
+
+        // let userInput = document.getElementById("input");
+        // userInput.innerHTML = "<i>" + message + "</i>";
+
+        // let result = document.getElementById("result");
+        // let name = prompt("What is your name?");
+        // userInput.innerHTML += ", <i>" + name + "</i>";
+
+        // console.log(name.toLowerCase());
+
+        // if (name.toLowerCase() == "zoe" && message.toLowerCase() == "tuesday") {
+        //   result.innerHTML = "Correct!";
+        // } else {
+        //   result.innerHTML = "Wrong!";
+        // }
+
+        let gender = prompt("What is your gender?");
+        let userInput = document.getElementById("input");
+        userInput.innerHTML = "<i>" + gender + "</i>";
+
+        let result = document.getElementById("result");
+        if (gender.toLowerCase() == "male" || gender.toLowerCase() == "man") {
+          result.innerHTML = "Hello, sir!";
+          document.getElementById("img-result").src = "images/man.png";
+        } else if (gender.toLowerCase() == "female" || gender.toLowerCase() == "woman"){
+          result.innerHTML = "Hello, madam!";
+          document.getElementById("img-result").src = "images/tiger1.jpg";
+        }
+        else{
+            result.innerHTML = "Hello, robot!";
+            document.getElementById("img-result").src = "images/bender.jpg";
+        }
+      }
+    </script>
+  </body>
+</html>
