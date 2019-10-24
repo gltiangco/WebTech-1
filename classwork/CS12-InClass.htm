@@ -14,29 +14,42 @@
       }
     </style>
     <script type="text/javascript">
-      function enlarge(imageID) {
-        let i = document.getElementById(imageID);
+      function enlarge(x) {        
+        console.log(x);
+        let i = document.getElementById(x);
+        console.log(i);
         let w = i.width;
-        console.log(w);
+        // console.log(w);
         w = w * 1.5;
-        console.log(w);
+        // console.log(w);
         i.style.width = w + "px";
-        console.log(i.width);
+        // console.log(i.width);
+        let h = document.getElementById("h");
+        if (x == "usa") {
+          h.innerHTML = "This is a USA map";
+        } else if(x =="tiger"){
+          h.innerHTML = "The big tiger is watching you";
+        }
+        else if (x == "class2"){
+          h.innerHTML = "Owen is watching you"
+        }
       }
-      function reduce(imageID) {
-        let i = document.getElementById(imageID);
+      function reduce(x) {
+        
+        let i = document.getElementById(x);
         let w = i.width;
         // console.log(w);
         w = w / 1.5;
         // console.log(w);
         // console.log(i.width);
         i.style.width = w + "px";
+        document.getElementById("h").innerHTML = "Manipulating Styles and Images";
       }
     </script>
   </head>
 
   <body>
-    <h2>Manipulating Styles and Images</h2>
+    <h2 id="h">Manipulating Styles and Images</h2>
     <p>
       <img
         id="usa"
@@ -62,5 +75,15 @@
     </p>
 
     <hr />
+    <p>
+      <img
+        id="class2"
+        onmouseout="reduce(this.id)"
+        onmouseover="enlarge(this.id)"
+        src="images/class2.jpg"
+        alt="Tiger image goes here"
+        title="Tiger"
+      />
+    </p>
   </body>
 </html>
