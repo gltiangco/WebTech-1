@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CS13-InClass</title>
+    <style type="text/css">
+      h1 {
+        text-align: center;
+        font-family: Lucida Handwriting;
+        font-weight: bold;
+      }
+
+      p {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      img {
+        border: 15px ridge yellow;
+        width: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Changing Images Using User inputs - Click on Image below to start</h1>
+    <p>
+      <img
+        id="img1"
+        onclick="imgChange()"
+        src=""
+        alt="Click here to see the image of your choice"
+        title=""
+      />
+    </p>
+    <a href="low.htm">List of Work</a>
+
+    <script type="text/javascript">
+      function imgChange() {
+        var i = prompt("Enter a leaf name");
+        var x = document.getElementById("img1");
+        if (i.toLowerCase() === "maple") {
+          x.src = "images/maple.jpg";
+          x.title = "Maple";
+        } else if (i.toLowerCase() === "clover") {
+          x.src = "images/clover.jpg";
+          x.title = "Clover";
+        } else if (i.toLowerCase() === "thyme") {
+          x.src = "images/thyme.jpg";
+          x.title = "Thyme";
+        } else if (i.toLowerCase() === "shamrock") {
+          x.src = "images/shamrock.jpg";
+          x.title = "Shamrock";
+        } else {
+          alert("Input is incorrect");
+        }
+      }
+    </script>
+  </body>
+</html>
